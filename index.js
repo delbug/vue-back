@@ -6,7 +6,7 @@ let users = [
     { id: 4, name: 'summy', email: '444@qq.com' },
     { id: 5, name: 'toni', email: '5555@qq.com' },
 ];
-// 1 2 3 4 5 6
+// 1 2 3 4 5 6 7
 let server = http.createServer(function (req, res) {
     if (req.url === '/api/users') {
         res.setHeader("Access-Control-Allow-Origin", "*");
