@@ -1,8 +1,9 @@
 let http = require('http');
 let users = [
-    { id: 1, name: 'John', email: '123@qq.com' },
-    { id: 2, name: 'jack', email: '678@qq.com' },
-    { id: 3, name: 'mack', email: '999@qq.com' },
+    { id: 1, name: 'John', email: '111@qq.com' },
+    { id: 2, name: 'jack', email: '222@qq.com' },
+    { id: 3, name: 'mack', email: '333@qq.com' },
+    { id: 4, name: 'summy', email: '444@qq.com' },
 ];
 
 let server = http.createServer(function (req, res) {
