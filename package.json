@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/delbug/vue-back/issues"
   },
-  "homepage": "https://github.com/delbug/vue-back#readme"
+  "homepage": "https://github.com/delbug/vue-back#readme",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
