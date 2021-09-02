@@ -1,8 +1,8 @@
 FROM node 
-LABEL name = "vue-back"
-LABEL version = "1.0"
+LABEL name="vue-back"
+LABEL version="1.0"
 COPY . /app
 WORKDIR /app
-RUN nmp install
+RUN npm install
 EXPOSE 3000
 CMD npm start
