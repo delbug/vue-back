@@ -5,7 +5,7 @@ let users = [
     { id: 3, name: 'mack', email: '333@qq.com' },
     { id: 4, name: 'summy', email: '444@qq.com' },
     { id: 5, name: 'toni', email: '55@qq.com' },
-    { id: 6, name: 'luosha', email: '666-34@qq.com' },
+    { id: 6, name: 'luosha', email: '666-5@qq.com' },
 ];
 // 1 2 3 4 5 6 7 8 9 10 
 let server = http.createServer(function (req, res) {
