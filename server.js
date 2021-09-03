@@ -19,17 +19,3 @@ let server = http.createServer(function (req, res) {
 server.listen(3000, () => {
     console.log('监听3000');
 })
-
-/*
-体育高考分值加高，
-用：
-生产体育器材公司：
-穿：
-体育服装公司：贵人鸟 特步
-体育鞋类公司：鸿星尔克 安踏 特步
-喝：
-体育能量饮料：东鹏特饮 红牛
-吃：
-
-行：
-*/
