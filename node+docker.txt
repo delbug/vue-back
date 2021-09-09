@@ -1,0 +1,145 @@
+阿里云服务器 
+https://ecs.console.aliyun.com/#/server/region/cn-hangzhou?instanceIds=i-bp112ukso0j0q45a579j
+
+
+
+ip:120.26.81.60
+pwd:Wj*******9-
+
+
+更新：yum update
+安装git ：yum install git -y
+
+
+连接服务器： ssh root@120.26.81.60 
+进入 xshell
+
+cd user/projects/vue-
+cd user/projects/vue-webhook/
+
+
+不想输入密码 生成公钥：
+ssh-keygen -t rsa -b 4096 -C "81692059@qq.com"
+
+公钥路径：/root/.ssh/id_rsa.pub
+查找公钥：cat /root/.ssh/id_rsa.pub
+复制公钥到github里面 
+
+创建user：mkdir user 
+创建projcets： mkdir projects
+
+进入project文件夹：cd /user/projects/
+
+操作后端代码：vue-back
+复制github地址 git@github.com:delbug/vue-back.git
+克隆地址：git clone git@github.com:delbug/vue-back.git
+
+操作前端代码：vue-front
+复制git地址：git@github.com:delbug/vue-front.git
+克隆git：git clone git@github.com:delbug/vue-front.git
+
+管理node，安装nvm：
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+
+. /root/.bashrc
+nvm install stabel
+npm install nrm -g
+
+配置端口：阿里云 -  服务器 - 安全组 - 安全组规则 - 添加安全组规则 - 端口范围 4000/4000
+
+
+安装docker：
+yum install -y yum-utils device-mapper-persistent-data lvm2
+
+阿里云镜像仓库 yum-config-manager --add-repo  http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+yum install -y docker-ce docker-ce-cli containerd.io
+
+
+阿里云加速
+mkdir - p /etc/docker
+
+往daemon.json里面写入内容：
+tee /etc/docker/daemon.json <<-'EOF'
+{
+ "registry-mirrors" :["https://fwvjnv95.mirror.aliyun.com"]
+}
+EOF
+
+
+systemctl daemon-reload
+systemctl restart docker
+
+
+使用淘宝源：nrm use taobao
+
+
+服务器后台启动：
+nohup node ./index.js &
+nohup npm run serve
+
+查下进程  ps aux | grep node
+强制关闭node进程：
+kill -9 4096
+kill -9 4107
+
+
+webhooks服务：
+github设置webhooks
+
+payloadURL：http://120.26.81.60:4000/webhook
+
+Content Type ：application/json
+
+------
+安装 pm2
+在后台启动node服务
+npm i pm2
+
+
+Git 短命令：
+
+[alias]
+   a = add .
+   c = commit -m'msg'
+   p = push 
+
+vi ~/gitconfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
